@@ -11,7 +11,7 @@ st.title('Penguin Classifier')
 st.write('This app uses 6 inputs to predict the specific of penguin')
 
 password_guess = st.text_input('What is your password?')
-if password_guess != 'checked_password':
+if password_guess != 'streamlit_password':
     st.stop()
 
 penguin_file = st.file_uploader('Upload your own penguin data')
