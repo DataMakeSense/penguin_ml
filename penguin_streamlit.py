@@ -10,6 +10,10 @@ from sklearn.model_selection import train_test_split
 st.title('Penguin Classifier')
 st.write('This app uses 6 inputs to predict the specific of penguin')
 
+password_guess = st.text_input('What is your password?')
+if password_guess != 'checked_password':
+    st.stop()
+
 penguin_file = st.file_uploader('Upload your own penguin data')
 if penguin_file is None:
     rf_pickle = open('random_forest_penguin.pickle', 'rb')
